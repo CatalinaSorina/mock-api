@@ -1,0 +1,64 @@
+// IF YOU CHANGE API_MAIN_ROUTE PLEASE MAKE SURE TO REPLACE /App WITH
+GET http://localhost:8000/App/users
+
+###
+GET https://localhost:8040/App/users
+
+###
+POST http://localhost:8000/App/login
+Content-Type: application/json
+
+{
+    "email":"t@t.t",
+    "password":"test"
+}
+
+###
+POST http://localhost:8000/App/register
+Content-Type: application/json
+
+{
+    "name":"Testare",
+    "email":"t@t.ro",
+    "password":"tested"
+}
+
+###
+POST http://localhost:8000/App/resetUserPassword
+Content-Type: application/json
+
+{
+    "email":"t@t.t"
+}
+
+###
+POST http://localhost:8000/App/updateUserPassword
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoidEB0LnQiLCJwYXNzd29yZCI6InRlc3QiLCJpYXQiOjE1OTk4MzI4MTIsImV4cCI6MTU5OTgzMzQxMn0.Qo8m1wAJmeJMDSQv7Zuj5BElBsvrFlmzWdus8EQd1lY
+Content-Type: application/json
+
+{
+    "email":"t@t.ro",
+    "newPassword":"change password tested"
+}
+
+###
+DELETE  http://localhost:8000/App/deleteUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoidEB0LnQiLCJwYXNzd29yZCI6InRlc3QiLCJpYXQiOjE1OTk4MzI4MTIsImV4cCI6MTU5OTgzMzQxMn0.Qo8m1wAJmeJMDSQv7Zuj5BElBsvrFlmzWdus8EQd1lY
+Content-Type: application/json
+
+{
+    "email":"t@t.t"
+}
+
+###
+GET http://localhost:8000/App/data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoidEB0LnQiLCJwYXNzd29yZCI6InRlc3QiLCJpYXQiOjE1OTk4MzI4MTIsImV4cCI6MTU5OTgzMzQxMn0.Qo8m1wAJmeJMDSQv7Zuj5BElBsvrFlmzWdus8EQd1lY
+
+###
+POST http://localhost:8000/App/dataId
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoidEB0LnQiLCJwYXNzd29yZCI6InRlc3QiLCJpYXQiOjE1OTk4MzI4MTIsImV4cCI6MTU5OTgzMzQxMn0.Qo8m1wAJmeJMDSQv7Zuj5BElBsvrFlmzWdus8EQd1lY
+Content-Type: application/json
+
+{
+    "id":1
+}

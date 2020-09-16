@@ -1,0 +1,27 @@
+// IF YOU CHANGE API_MAIN_ROUTE PLEASE MAKE SURE TO REPLACE /App WITH
+POST http://localhost:8000/App/login
+Content-Type: application/json
+
+{
+    "email":"t@t.t",
+    "password":"test"
+}
+
+###
+POST http://localhost:8000/App/refreshToken
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoidEB0LnQiLCJwYXNzd29yZCI6InRlc3QiLCJpYXQiOjE1OTk4MzE4MzB9.nPy5aKrJ7MDTI7dcI3IE36JazSKSCBTIQxn4ylEbLSc"
+}
+
+###
+DELETE http://localhost:8000/App/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVGVzdCIsImVtYWlsIjoidEB0LnQiLCJwYXNzd29yZCI6InRlc3QiLCJpYXQiOjE1OTk4MzE4MzB9.nPy5aKrJ7MDTI7dcI3IE36JazSKSCBTIQxn4ylEbLSc"
+}
+
+###
+GET http://localhost:8000/App/tokens
